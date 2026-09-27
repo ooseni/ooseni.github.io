@@ -1,34 +1,224 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Startup</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oseni Sakariyau Oluwadamilare · Cloud DevOps Engineer</title>
+  <meta name="description" content="Portfolio of Oseni Sakariyau Oluwadamilare (Dami), a Cloud DevOps Engineer in Lagos, Nigeria: AWS, Terraform, Kubernetes and CI/CD projects.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ooseni.github.io/">
+  <meta property="og:title" content="Oseni Sakariyau Oluwadamilare · Cloud DevOps Engineer">
+  <meta property="og:description" content="AWS, Terraform, Kubernetes and CI/CD projects by a Cloud DevOps Engineer in Lagos, Nigeria.">
+  <meta property="og:image" content="https://ooseni.github.io/assets/certwatch-architecture-dark.png">
+  <link rel="canonical" href="https://ooseni.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <!-- Your own stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div class="container d-flex align-items-center h-100">
-      <div class="row">
-        <header class="text-center col-12">
-          <h1 class="text-uppercase"><strong>The biggest startup event of the year</strong></h1>
-        </header>
-        <div class="buffer col-12">
-        <section class="text-center col-12">
-          <hr>
-          <a href="https://mailchi.mp/e3869d7e96ce/webwizstudents">
-            <button class="btn btn-primary btn-xl">Find out more</button>
-          </a>  
-        </section>
-      </div>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top">Dami Oseni</a>
+      <nav aria-label="Sections">
+        <a href="#featured">Featured</a>
+        <a href="#devops">DevOps work</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">Cloud DevOps Engineer · Lagos, Nigeria</p>
+        <h1>Oseni Sakariyau Oluwadamilare</h1>
+        <p class="lead">I build scalable infrastructure and automate deployments on the cloud, with a focus on CI/CD pipelines and deployment infrastructure. I came to DevOps from data analysis and data science, and it is now my sole focus.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/ooseni">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/sakariyau-oseni-599106bd/">LinkedIn</a>
+          <a class="button" href="mailto:drey199572@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured" class="section">
+      <div class="wrap">
+        <h2 class="section-title"><span class="num">01</span> Featured project</h2>
+        <article class="feature">
+          <div class="feature-text">
+            <p class="status"><span class="dot" aria-hidden="true"></span> In progress · phases 1–2 of 7 done</p>
+            <h3>CertWatch</h3>
+            <p>A serverless SSL/TLS certificate expiry monitor on AWS. Register the domains you care about; CertWatch checks their certificates every day and emails you before one expires.</p>
+            <ul class="points">
+              <li><strong>Built:</strong> a domain CRUD API on API Gateway (HTTP API), Lambda and DynamoDB, defined with AWS SAM, with unit tests and integration tests against LocalStack.</li>
+              <li><strong>Next:</strong> daily certificate checks through EventBridge Scheduler with SNS email alerts, then deployment through GitHub Actions with OIDC, so no AWS keys are stored.</li>
+              <li><strong>Operable from day one:</strong> an IAM role per function, JSON logs kept for 14 days, X-Ray tracing, and secret scanning on every commit.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack">
+              <li>AWS SAM</li><li>Python</li><li>API Gateway</li><li>Lambda</li><li>DynamoDB</li><li>EventBridge</li><li>SNS</li><li>LocalStack</li>
+            </ul>
+            <a class="link" href="https://github.com/ooseni/certwatch">View the code on GitHub <span aria-hidden="true">→</span></a>
+          </div>
+          <figure class="diagram">
+            <a href="assets/certwatch-architecture.svg">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="assets/certwatch-architecture-dark.png">
+                <img src="assets/certwatch-architecture.svg" width="1693" height="957" loading="lazy"
+                     alt="CertWatch target architecture: an HTTP API and Lambda over DynamoDB; a daily checker Lambda tests each domain's TLS certificate and alerts through SNS.">
+              </picture>
+            </a>
+            <figcaption>Target architecture, drawn with the official AWS icons. <a href="assets/certwatch-architecture.svg">Open full size</a></figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="devops" class="section alt">
+      <div class="wrap">
+        <h2 class="section-title"><span class="num">02</span> DevOps work</h2>
+
+        <h3 class="group">Springer Capital · automation scripts</h3>
+        <div class="grid">
+          <a class="card" href="https://github.com/ooseni/DEV-785-Automation-Script-Generate-Nomad-Job">
+            <p class="tag">DEV-785</p>
+            <h4>Generate Nomad jobs</h4>
+            <p>Python script that generates deployable HashiCorp Nomad job specifications in HCL.</p>
+            <ul class="chips"><li>Python</li><li>Nomad</li><li>HCL</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/DEV-786-Automation-Script-Domain-SSL-Certificate-Checker">
+            <p class="tag">DEV-786</p>
+            <h4>Domain and SSL certificate checker</h4>
+            <p>Python script that checks domain and certificate validity and expiry dates and exports CSV reports, with a Vagrant lab for testing.</p>
+            <ul class="chips"><li>Python</li><li>TLS</li><li>Vagrant</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/DEV-787-Automation-Script-Export-Nomad-Job-to-CSV">
+            <p class="tag">DEV-787</p>
+            <h4>Export Nomad jobs to CSV</h4>
+            <p>Python script that pulls running job configurations from Nomad and exports them to a structured CSV, with a Vagrant lab.</p>
+            <ul class="chips"><li>Python</li><li>Nomad</li><li>Vagrant</li></ul>
+          </a>
+        </div>
+
+        <h3 class="group">Davine Technology · weekly DevOps track</h3>
+        <div class="grid">
+          <a class="card" href="https://github.com/ooseni/davine-week5-jenkins">
+            <p class="tag">Week 5</p>
+            <h4>Jenkins CI pipeline</h4>
+            <p>A fully automated continuous integration pipeline in Jenkins, defined as Pipeline-as-Code and triggered by webhooks.</p>
+            <ul class="chips"><li>Jenkins</li><li>CI/CD</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/davine-week6-IAc">
+            <p class="tag">Week 6</p>
+            <h4>Terraform and Ansible</h4>
+            <p>Infrastructure as code and configuration management on AWS with Terraform and Ansible.</p>
+            <ul class="chips"><li>Terraform</li><li>Ansible</li><li>AWS</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/davine-week7-kubernetes-containers-orc">
+            <p class="tag">Week 7</p>
+            <h4>Kubernetes orchestration</h4>
+            <p>Container orchestration on Minikube: Deployments, Services, ConfigMaps and scaling.</p>
+            <ul class="chips"><li>Kubernetes</li><li>Minikube</li></ul>
+          </a>
+        </div>
+
+        <h3 class="group">More DevOps projects</h3>
+        <div class="grid">
+          <a class="card" href="https://github.com/ooseni/devops-intern-final">
+            <p class="tag">Assessment</p>
+            <h4>End-to-end DevOps pipeline</h4>
+            <p>Linux scripting, Docker, GitHub Actions CI/CD, HashiCorp Nomad, Grafana Loki log aggregation and MLflow tracking.</p>
+            <ul class="chips"><li>Docker</li><li>GitHub Actions</li><li>Nomad</li><li>Loki</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/Operationalize-a-Machine-Learning-Microservice-API">
+            <p class="tag">Udacity · 2022</p>
+            <h4>ML microservice on Kubernetes</h4>
+            <p>A Flask API serving a scikit-learn model, containerised with Docker, deployed on Kubernetes and tested in CircleCI.</p>
+            <ul class="chips"><li>Kubernetes</li><li>Docker</li><li>CircleCI</li></ul>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="wrap">
+        <h2 class="section-title"><span class="num">03</span> Other projects</h2>
+        <div class="grid">
+          <a class="card" href="https://github.com/ooseni/bigquery-release-radar">
+            <p class="tag">Web app</p>
+            <h4>BigQuery Release Radar</h4>
+            <p>A Flask app that tracks Google Cloud BigQuery release notes from the official feed, with search, category filters, CSV export and a tweet composer.</p>
+            <ul class="chips"><li>Flask</li><li>JavaScript</li><li>Google Cloud</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/animation-studio">
+            <p class="tag">Web app</p>
+            <h4>Animation Studio</h4>
+            <p>A browser-based 2D animation studio: keyframe sprites on a canvas, add scene effects and export animated GIFs.</p>
+            <ul class="chips"><li>Streamlit</li><li>Pillow</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/Medical-Cost-Analysis">
+            <p class="tag">Data science</p>
+            <h4>Medical cost analysis</h4>
+            <p>Health insurance cost prediction: exploratory analysis, feature selection and regression models, from linear to CatBoost.</p>
+            <ul class="chips"><li>scikit-learn</li><li>CatBoost</li><li>Jupyter</li></ul>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section alt">
+      <div class="wrap two-col">
+        <div>
+          <h2 class="section-title"><span class="num">04</span> Journey</h2>
+          <ol class="timeline">
+            <li><span class="when">Start</span><strong>Data analyst.</strong> Analytical work that still shapes how I design systems.</li>
+            <li><span class="when">2022</span><strong>Data science intern at Hamoye</strong> (HDSC Winter '22), then machine learning and AI.</li>
+            <li><span class="when">2022</span><strong>ALX Software Engineering programme</strong>: C, Python and the Linux shell.</li>
+            <li><span class="when">2022</span><strong>Udacity Cloud DevOps Nanodegree</strong> on an ALX-T scholarship.</li>
+            <li><span class="when">Done</span><strong>TeSA Cloud Engineering programme.</strong></li>
+            <li><span class="when">Now</span><strong>DevOps engagements with Springer Capital and Davine Technology</strong>, focused on CI/CD pipelines and deployment infrastructure.</li>
+          </ol>
+        </div>
+        <div>
+          <h2 class="section-title"><span class="num">05</span> Toolbox</h2>
+          <dl class="toolbox">
+            <dt>Cloud and platforms</dt>
+            <dd><ul class="chips"><li>AWS</li><li>Google Cloud</li><li>Linux</li></ul></dd>
+            <dt>Infrastructure as code</dt>
+            <dd><ul class="chips"><li>Terraform</li><li>AWS SAM</li><li>Ansible</li><li>Vagrant</li></ul></dd>
+            <dt>Containers and orchestration</dt>
+            <dd><ul class="chips"><li>Docker</li><li>Kubernetes</li><li>HashiCorp Nomad</li><li>Nginx</li></ul></dd>
+            <dt>CI/CD</dt>
+            <dd><ul class="chips"><li>GitHub Actions</li><li>Jenkins</li><li>CircleCI</li></ul></dd>
+            <dt>Observability and testing</dt>
+            <dd><ul class="chips"><li>Grafana Loki</li><li>LocalStack</li><li>pytest</li></ul></dd>
+            <dt>Languages</dt>
+            <dd><ul class="chips"><li>Python</li><li>Go</li><li>Bash</li></ul></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap contact">
+        <h2 class="section-title"><span class="num">06</span> Let's connect</h2>
+        <p>I'm always open to collaborating on DevOps tools and open-source infrastructure, or to talking about cloud architecture.</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:drey199572@gmail.com">drey199572@gmail.com</a>
+          <a class="button" href="https://www.linkedin.com/in/sakariyau-oseni-599106bd/">LinkedIn</a>
+          <a class="button" href="https://github.com/ooseni">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Oseni Sakariyau Oluwadamilare · <a href="https://github.com/ooseni/ooseni.github.io">Site source</a> (MIT)</p>
+    </div>
+  </footer>
+</body>
 </html>
