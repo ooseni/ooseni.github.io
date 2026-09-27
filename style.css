@@ -127,6 +127,7 @@ h1 {
 }
 @media (prefers-color-scheme: dark) { .diagram { background: #000; } }
 .diagram figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; text-align: center; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0; }
 .link { font-weight: 600; text-decoration: none; }
 .link:hover { text-decoration: underline; }
 

@@ -57,11 +57,16 @@
               <li><strong>Built:</strong> a domain CRUD API on API Gateway (HTTP API), Lambda and DynamoDB, defined with AWS SAM, with unit tests and integration tests against LocalStack.</li>
               <li><strong>Next:</strong> daily certificate checks through EventBridge Scheduler with SNS email alerts, then deployment through GitHub Actions with OIDC, so no AWS keys are stored.</li>
               <li><strong>Operable from day one:</strong> an IAM role per function, JSON logs kept for 14 days, X-Ray tracing, and secret scanning on every commit.</li>
+              <li><strong>Decisions on record:</strong> seven architecture decision records, four accepted and three proposed for the next phases, also presented as a 19-slide ADR deck.</li>
             </ul>
             <ul class="chips" aria-label="Stack">
               <li>AWS SAM</li><li>Python</li><li>API Gateway</li><li>Lambda</li><li>DynamoDB</li><li>EventBridge</li><li>SNS</li><li>LocalStack</li>
             </ul>
-            <a class="link" href="https://github.com/ooseni/certwatch">View the code on GitHub <span aria-hidden="true">→</span></a>
+            <p class="links">
+              <a class="link" href="https://github.com/ooseni/certwatch">View the code on GitHub <span aria-hidden="true">→</span></a>
+              <a class="link" href="https://github.com/ooseni/certwatch/blob/main/docs/decisions/certwatch-adr-blueprint.pdf">ADR deck (PDF) <span aria-hidden="true">→</span></a>
+              <a class="link" href="https://github.com/ooseni/certwatch/tree/main/docs/decisions">Decision log <span aria-hidden="true">→</span></a>
+            </p>
           </div>
           <figure class="diagram">
             <a href="assets/certwatch-architecture.svg">
