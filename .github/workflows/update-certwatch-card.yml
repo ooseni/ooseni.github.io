@@ -1,0 +1,51 @@
+# Keeps the CertWatch card on the portfolio in step with CertWatch's roadmap and decision log.
+# Runs every day and on demand, and commits only when the card actually changes.
+name: Update the CertWatch card
+
+on:
+  schedule:
+    - cron: "17 6 * * *"          # every day at 06:17 UTC (07:17 in Lagos)
+  workflow_dispatch:               # Actions tab > Run workflow, or: gh workflow run update-certwatch-card.yml
+  repository_dispatch:
+    types: [certwatch-updated]     # lets CertWatch's own CI trigger this later, once it has a token for it
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: certwatch-card
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Regenerate the card from CertWatch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/update_certwatch_card.py --write
+
+      - name: Commit, push and publish if it changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "The CertWatch card is already current."
+            exit 0
+          fi
+          progress=$(python scripts/update_certwatch_card.py --summary)
+          git config user.name "Oseni Sakariyau Oluwadamilare"
+          git config user.email "61007256+ooseni@users.noreply.github.com"
+          git add index.html
+          git commit -m "docs: update the CertWatch card to $progress"
+          git push
+          # A push made with the workflow token may not start a Pages build by itself, so ask for one.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent \
+            || echo "::warning::The Pages build request failed; the next push will publish the card."
