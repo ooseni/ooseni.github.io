@@ -50,14 +50,14 @@
         <h2 class="section-title"><span class="num">01</span> Featured project</h2>
         <article class="feature">
           <div class="feature-text">
-            <!-- certwatch:status --><p class="status"><span class="dot" aria-hidden="true"></span> In progress · phases 1–2 of 7 done</p><!-- /certwatch:status -->
+            <!-- certwatch:status --><p class="status"><span class="dot" aria-hidden="true"></span> In progress · phases 1–3 of 7 done</p><!-- /certwatch:status -->
             <h3>CertWatch</h3>
             <p>A serverless SSL/TLS certificate expiry monitor on AWS. Register the domains you care about; CertWatch checks their certificates every day and emails you before one expires.</p>
             <ul class="points">
-              <!-- certwatch:built --><li><strong>Built:</strong> a domain CRUD API on API Gateway (HTTP API), Lambda and DynamoDB, defined with AWS SAM, with unit tests and integration tests against LocalStack.</li><!-- /certwatch:built -->
-              <!-- certwatch:next --><li><strong>Next:</strong> daily certificate checks through EventBridge Scheduler with SNS email alerts, then deployment through GitHub Actions with OIDC, so no AWS keys are stored.</li><!-- /certwatch:next -->
+              <!-- certwatch:built --><li><strong>Built:</strong> a domain CRUD API on API Gateway (HTTP API), Lambda and DynamoDB, and daily certificate checks through EventBridge Scheduler with SNS email alerts, all defined with AWS SAM and tested against LocalStack.</li><!-- /certwatch:built -->
+              <!-- certwatch:next --><li><strong>Next:</strong> deployment to AWS (dev stage) with smoke tests, then CI/CD through GitHub Actions with OIDC, so no AWS keys are stored.</li><!-- /certwatch:next -->
               <li><strong>Operable from day one:</strong> an IAM role per function, JSON logs kept for 14 days, X-Ray tracing, and secret scanning on every commit.</li>
-              <!-- certwatch:decisions --><li><strong>Decisions on record:</strong> seven architecture decision records, four accepted and three proposed for the next phases, also presented as a 19-slide ADR deck.</li><!-- /certwatch:decisions -->
+              <!-- certwatch:decisions --><li><strong>Decisions on record:</strong> eight architecture decision records, seven accepted and one proposed for the next phases; the first seven are also presented as a 19-slide ADR deck.</li><!-- /certwatch:decisions -->
             </ul>
             <ul class="chips" aria-label="Stack">
               <li>AWS SAM</li><li>Python</li><li>API Gateway</li><li>Lambda</li><li>DynamoDB</li><li>EventBridge</li><li>SNS</li><li>LocalStack</li>
