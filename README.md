@@ -6,10 +6,10 @@ A single static page in plain HTML and CSS, published by GitHub Pages from the d
 
 | File | Contents |
 |---|---|
-| `index.html` | The page: featured project, DevOps work, other projects, journey, toolbox, contact |
+| `index.html` | The page: featured projects, DevOps work, other projects, journey, toolbox, contact |
 | `style.css` | Layout, and colour tokens for light and dark mode |
 | `favicon.svg` | Site icon |
-| `assets/` | The CertWatch architecture diagram (light SVG, dark PNG), copied from [ooseni/certwatch](https://github.com/ooseni/certwatch) |
+| `assets/` | The CertWatch architecture diagram (light SVG, dark PNG), copied from [ooseni/certwatch](https://github.com/ooseni/certwatch), and the e-commerce platform's architecture diagram (PNG on black), copied from [ooseni/ai-ecommerce-devops](https://github.com/ooseni/ai-ecommerce-devops) |
 | `scripts/update_certwatch_card.py` | Regenerates the CertWatch card's status line and its Built, Next and Decisions bullets from [ooseni/certwatch](https://github.com/ooseni/certwatch) |
 | `.github/workflows/update-certwatch-card.yml` | Runs that script every day and on demand, and commits only when the card changes |
 
