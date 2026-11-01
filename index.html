@@ -47,7 +47,34 @@
 
     <section id="featured" class="section">
       <div class="wrap">
-        <h2 class="section-title"><span class="num">01</span> Featured project</h2>
+        <h2 class="section-title"><span class="num">01</span> Featured projects</h2>
+        <article class="feature">
+          <div class="feature-text">
+            <p class="status"><span class="dot" aria-hidden="true"></span> Complete · milestones M0 to M8, released as v1.0.0</p>
+            <h3>AI-Powered E-Commerce DevOps Platform</h3>
+            <p>An internship capstone at lab scale: a change to an online shop goes from a pull request, through security checks, onto Kubernetes on AWS with no manual step. The running shop is monitored, its logs are searchable, and a rule-based analyzer explains what broke.</p>
+            <ul class="points">
+              <li><strong>Built:</strong> a 10-stage Jenkins pipeline, a Helm chart, Terraform and Ansible for AWS, dashboards, alerts and a log pipeline, an incident analyzer, and 25 architecture decision records.</li>
+              <li><strong>Proof:</strong> on 1 November 2026 a merge into main passed every gate and deployed to AWS. I then destroyed AWS and rebuilt it from code, with the shop working 248 seconds after Terraform finished. A rolling restart answered 116 of 116 requests with 200, and the analyzer named the cause of an outage I injected.</li>
+              <li><strong>Next:</strong> run the analyzer's optional explanation from Claude against the live API, which has not been run yet.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack">
+              <li>Jenkins</li><li>Docker</li><li>Kubernetes</li><li>Helm</li><li>Terraform</li><li>Ansible</li><li>AWS</li><li>Prometheus</li><li>Grafana</li><li>ELK</li>
+            </ul>
+            <p class="links">
+              <a class="link" href="https://github.com/ooseni/ai-ecommerce-devops">View the code on GitHub <span aria-hidden="true">→</span></a>
+              <a class="link" href="https://github.com/ooseni/ai-ecommerce-devops/releases/download/v1.0.0/ai-ecommerce-devops-adr-v1.0.pdf">ADR pack (PDF) <span aria-hidden="true">→</span></a>
+              <a class="link" href="https://github.com/ooseni/ai-ecommerce-devops/tree/main/docs/decisions">Decision log <span aria-hidden="true">→</span></a>
+            </p>
+          </div>
+          <figure class="diagram">
+            <a href="assets/ai-ecommerce-architecture.png">
+              <img src="assets/ai-ecommerce-architecture.png" width="2286" height="1826" loading="lazy"
+                   alt="A shopper reaches Traefik, Nginx, the API and MongoDB on one k3s node on EC2, with logging and monitoring namespaces beside them.">
+            </a>
+            <figcaption>System architecture, drawn with the official AWS icons. <a href="assets/ai-ecommerce-architecture.png">Open full size</a></figcaption>
+          </figure>
+        </article>
         <article class="feature">
           <div class="feature-text">
             <!-- certwatch:status --><p class="status"><span class="dot" aria-hidden="true"></span> In progress · phases 1–3 of 7 done</p><!-- /certwatch:status -->
