@@ -137,6 +137,30 @@
 
         <h3 class="group">Davine Technologies · weekly DevOps track</h3>
         <div class="grid">
+          <a class="card" href="https://github.com/ooseni/davine-week1-aws-iam-security">
+            <p class="tag">Week 1</p>
+            <h4>Secure AWS account setup</h4>
+            <p>Terraform gives a new developer an IAM identity that can do nothing useful until MFA is on, and gives the app an EC2 role instead of access keys. 23 of 23 live checks passed on AWS, including 19 IAM policy simulations.</p>
+            <ul class="chips"><li>Terraform</li><li>AWS IAM</li><li>MFA</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/davine-week2-aws-ec2-web-server">
+            <p class="tag">Week 2</p>
+            <h4>EC2 web server</h4>
+            <p>An Nginx server on EC2 that builds itself on first boot, with a least-privilege security group, an Elastic IP, CloudWatch alarms and an AMI backup proven to restore. 73 of 73 live checks passed, for about US$0.04.</p>
+            <ul class="chips"><li>Terraform</li><li>Amazon EC2</li><li>CloudWatch</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/davine-week3-aws-vpc-networking">
+            <p class="tag">Week 3</p>
+            <h4>VPC networking</h4>
+            <p>A two-tier VPC with a NAT gateway, network ACLs and peering, plus a path checker I wrote that names the exact hop that drops a packet. 84 of 84 live checks passed, and three injected faults were traced and fixed.</p>
+            <ul class="chips"><li>Terraform</li><li>Amazon VPC</li><li>Python</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/davine-week4-aws-storage-databases">
+            <p class="tag">Week 4</p>
+            <h4>Storage and databases</h4>
+            <p>An S3 static website, a private versioned bucket, RDS for PostgreSQL and DynamoDB. My scripted review caught the first version leaking files to the internet, and 119 of 119 live checks proved the fix.</p>
+            <ul class="chips"><li>Terraform</li><li>Amazon S3</li><li>RDS</li><li>DynamoDB</li></ul>
+          </a>
           <a class="card" href="https://github.com/ooseni/davine-week5-jenkins">
             <p class="tag">Week 5</p>
             <h4>Jenkins CI pipeline</h4>
@@ -160,6 +184,12 @@
             <h4>Monitoring and observability</h4>
             <p>Monitoring, logging and observability on a Linux server with Prometheus, Grafana and Node Exporter, including CPU alerting and a documented incident walkthrough.</p>
             <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Node Exporter</li></ul>
+          </a>
+          <a class="card" href="https://github.com/ooseni/davine-week9-jenkins-cicd-deployments">
+            <p class="tag">Week 9</p>
+            <h4>Jenkins CI/CD to Kubernetes</h4>
+            <p>A commit becomes a tested, scanned image in Amazon ECR and is deployed to Kubernetes as a rolling or blue-green release. A deliberately broken release was rolled back automatically with 0 of 297 requests failing.</p>
+            <ul class="chips"><li>Jenkins</li><li>Docker</li><li>Kubernetes</li><li>Amazon ECR</li></ul>
           </a>
         </div>
 
