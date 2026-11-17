@@ -164,25 +164,25 @@
           <a class="card" href="https://github.com/ooseni/davine-week5-jenkins">
             <p class="tag">Week 5</p>
             <h4>Jenkins CI pipeline</h4>
-            <p>A fully automated continuous integration pipeline in Jenkins, defined as Pipeline-as-Code and triggered by webhooks.</p>
-            <ul class="chips"><li>Jenkins</li><li>CI/CD</li></ul>
+            <p>Every push to main starts a four-stage declarative Jenkins pipeline through a GitHub webhook, and a failing step stops the run. A planned failure stopped build #3 at Test, and build #4 passed all four stages in 30 seconds.</p>
+            <ul class="chips"><li>Jenkins</li><li>CI/CD</li><li>GitHub webhooks</li></ul>
           </a>
           <a class="card" href="https://github.com/ooseni/davine-week6-IAc">
             <p class="tag">Week 6</p>
             <h4>Terraform and Ansible</h4>
-            <p>Infrastructure as code and configuration management on AWS with Terraform and Ansible.</p>
+            <p>Terraform builds an Ubuntu web server on EC2 and an Ansible playbook configures Nginx and Fail2ban. A re-run changed only the two new tasks, which shows the playbook is idempotent.</p>
             <ul class="chips"><li>Terraform</li><li>Ansible</li><li>AWS</li></ul>
           </a>
           <a class="card" href="https://github.com/ooseni/davine-week7-kubernetes-containers-orc">
             <p class="tag">Week 7</p>
             <h4>Kubernetes orchestration</h4>
-            <p>Container orchestration on Minikube: Deployments, Services, ConfigMaps and scaling.</p>
+            <p>Nginx runs as three replicas on minikube with a namespace, ConfigMap, Secret and NodePort Service. It scaled to five and back, updated without downtime and rolled back with one command.</p>
             <ul class="chips"><li>Kubernetes</li><li>Minikube</li></ul>
           </a>
           <a class="card" href="https://github.com/ooseni/davine-week8-Monitoring-Logging-Observability">
             <p class="tag">Week 8</p>
             <h4>Monitoring and observability</h4>
-            <p>Monitoring, logging and observability on a Linux server with Prometheus, Grafana and Node Exporter, including CPU alerting and a documented incident walkthrough.</p>
+            <p>Prometheus, Grafana and Node Exporter watch a Linux server's CPU, memory, disk and uptime. A High CPU alert fired during a controlled stress test and cleared on its own once the load stopped.</p>
             <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Node Exporter</li></ul>
           </a>
           <a class="card" href="https://github.com/ooseni/davine-week9-jenkins-cicd-deployments">
